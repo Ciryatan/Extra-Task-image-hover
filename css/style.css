@@ -1,11 +1,59 @@
-#powiekszenie img{
--webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease;
+
+.poczatek {
+    padding: 50px 50px;
+    max-width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+		margin-top: 80px;
 }
-#powiekszenie img:hover {
--o-transition: all 0.6s;
--moz-transition: all 0.6s;
--webkit-transition: all 0.6s;
--moz-transform: scale(1.1);
--o-transform: scale(1.1);
--webkit-transform: scale(1.1);
+
+.powiekszenie {
+    width: 45%;
+    margin: 20px;
+    height: 300px;
+    border: 1px solid blue;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
 }
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.bg-one {background-image: 
+    url(http://www.zyj-kochaj-tworz.pl/wp-content/uploads/2015/03/zmiana-koloru-zdjecia-po-najechaniu-kursorem-hover-css-blogger.jpg);}
+
+.powiekszenie:hover .child, .powiekszenie:focus .child {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    
+}
+
+.powiekszenie:hover .child:before, .powiekszenie:before .child:before{
+    display:block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,73,94,0.75);
+}
+
